@@ -1,0 +1,19 @@
+{
+  "name": "mongodbconnect",
+  "version": "1.0.0",
+  "description": "Pietfogo service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "PietFogoBR",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1"
+  }
+}

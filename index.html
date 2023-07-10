@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar pizzas</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="sendParams()">Enviar parâmetros</button>
+    <script>
+        function sendParams() {
+            const input = document.getElementById("input").value;
+            fetch('http://localhost:3025/pizzas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nomePizza: input })
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+        }
+    </script>
+</body>
+</html>
